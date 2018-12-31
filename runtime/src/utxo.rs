@@ -55,7 +55,7 @@ pub struct TransactionOutput {
 decl_module! {
 	pub struct Module<T: Trait> for enum Call where origin: T::Origin {
 		pub fn execute(origin, transaction: Transaction) -> Result {
-			ensure_inherent(origin)?;
+			//ensure_inherent(origin)?;
 
 			Self::check_transaction(&transaction)?;
 			Self::update_storage(&transaction);
